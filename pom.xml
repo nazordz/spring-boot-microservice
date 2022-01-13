@@ -8,6 +8,7 @@
   <modules>
     <module>customer</module>
     <module>fraud</module>
+    <module>eureka-server</module>
   </modules>
   <name>spring-services</name>
 
@@ -17,6 +18,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <spring.boot.maven.plugin.version>2.6.2</spring.boot.maven.plugin.version>
     <spring.boot.maven.dependencies.version>2.6.2</spring.boot.maven.dependencies.version>
+    <spring.cloud-version>2021.0.0</spring.cloud-version>
   </properties>
 
   <dependencyManagement>
@@ -28,14 +30,17 @@
         <scope>import</scope>
         <type>pom</type>
       </dependency>
+      <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>${spring.cloud-version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
-      <groupId></groupId>
-      <artifactId>dev</artifactId>
-    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
